@@ -46,3 +46,23 @@ header{
 .flex{
     display: flex;
 }
+
+.flex ul ul {
+  display: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.flex ul li {
+  cursor: pointer;
+}
+
+.flex ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
+.flex ul li.open > ul {
+  display: block; 
+}
