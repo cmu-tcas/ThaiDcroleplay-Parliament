@@ -42,13 +42,75 @@ header{
   color: #fff;
   height: 60px;
 }
-
-nav {
-    display: flex;
-    align-items: center;
-    top: 0;
-    position: fixed;
+header {
+  background-color: #000; /* พื้นหลังสีดำ */
+  color: #fff; /* สีข้อความ */
+  padding: 20px 0;
 }
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .logo img {
+  max-height: 50px; /* ปรับขนาดโลโก้ */
+}
+
+header .flex ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+header .flex ul > li {
+  position: relative;
+}
+
+header .flex ul li a {
+  text-decoration: none;
+  color: #fff; /* สีลิงก์ */
+  padding: 10px;
+  display: inline-block;
+  transition: color 0.3s;
+}
+
+header .flex ul li a:hover {
+  color: #f0a500; /* สีลิงก์เมื่อ hover */
+}
+
+header .flex ul ul {
+  display: none; 
+  position: absolute;
+  background-color: #333; 
+  padding: 10px;
+  border-radius: 4px;
+  list-style-type: none;
+}
+
+header .flex ul ul li a {
+  padding: 5px 10px;
+  color: #fff;
+  display: block;
+  white-space: nowrap; 
+}
+
+header .flex ul ul li a:hover {
+  background-color: #444; /* พื้นหลังเมื่อ hover */
+}
+
+header .flex ul > li:hover > ul {
+  display: block; /* แสดงเมนูย่อยเมื่อ hover */
+}
+
+.search {
+  width: 100px; /* ขนาดพื้นที่ค้นหา */
+  height: 30px;
+}
+
 .flex{
     display: flex;
 }
