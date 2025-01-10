@@ -1,0 +1,43 @@
+:root {
+    --bg: #e9f4ff;
+    --blue: #1a477f;
+    --teal: #00a0a9;
+    --red: #ea0c42;
+    --pink: #da558d;
+    --s-color-1: #1a477f;
+    --s-color-2: #00a0a9;
+    --s-color-noti: #ea0c42;
+    --s-text-1: #191e23;
+    --s-text-2: #828897;
+    --s-bg-1: #fff;
+    --s-bg-2: #f5f5f7;
+    --s-border-1: #d2d2d7;
+    --s-border-2: #e2e2e7;
+    --s-nav-bg: #ffffffbb;
+    --s-foot-bg: #1a477f;
+    --s-foot-text: #ffffffcc;
+    --s-link-1: var(--s-color-1);
+    --s-link-2: var(--s-color-2);
+    --s-rounded-1: 3px;
+    --s-rounded-2: 5px;
+    --s-body: kvl, sans-serif;
+    --s-heading: kvl, sans-serif;
+    --s-heading-weight: 400;
+    --s-shadow-1: 0 .5px 2px rgba(0, 0, 0, .16);
+    --s-shadow-2: 0 4px 12px rgba(0, 0, 0, .08);
+    --s-gap: 1rem;
+    --s-space: 1rem;
+    --s-content-width: 100%;
+    --s-container-width: 100%;
+}
+
+body, *, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header{
+  background: #000;
+  color: #fff;
+}
