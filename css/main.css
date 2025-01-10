@@ -40,4 +40,9 @@ body, *, *:before, *:after {
 header{
   background: #000;
   color: #fff;
+  height: 60px;
+}
+
+.flex{
+    display: flex;
 }
