@@ -92,7 +92,7 @@ function updateStatus(set) {
     statusSpan.classList.add("green"); // เพิ่มคลาสสีเขียว
 
     // วันที่สำหรับ set1
-    statusDateSpan.textContent = "1 มกราคม - 1 กุมภาพันธ์";
+    statusDateSpan.textContent = "1 มกราคม - 1 กุมภาพันธ์ 2567";
   } else if (set === "special_set") {
     // สถานะสำหรับ special_set
     statusSpan.textContent = "หมดวาระ";
@@ -100,7 +100,7 @@ function updateStatus(set) {
     statusSpan.classList.add("red"); // เพิ่มคลาสสีแดง
 
     // วันที่สำหรับ special_set
-    statusDateSpan.textContent = "8 ธันวาคม - 28 ธันวาคม";
+    statusDateSpan.textContent = "8 ธันวาคม - 28 ธันวาคม 2567";
   }
 }
 
