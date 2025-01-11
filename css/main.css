@@ -188,3 +188,46 @@ p.status-date {
     line-height: 1.42857;
     letter-spacing: .16px;
 }
+.fluid-heading-05 {
+    font-size: 2rem;
+    line-height: 1.25;
+    letter-spacing: 0;
+    font-size: calc(2rem + .25*(100vw - 20rem)/22);
+    font-family: Kondolar Thai,ui-serif,Georgia,Cambria,Times New Roman,Times,serif;
+    font-weight: 700!important
+}
+
+@media (min-width: 42rem) {
+    .fluid-heading-05 {
+        font-size:2.25rem;
+        font-weight: 300;
+        line-height: 1.22;
+        letter-spacing: 0;
+        font-size: calc(2.25rem + .375*(100vw - 42rem)/24)
+    }
+}
+
+@media (min-width: 66rem) {
+    .fluid-heading-05 {
+        font-size:2.625rem;
+        line-height: 1.19;
+        letter-spacing: 0;
+        font-size: calc(2.625rem + .375*(100vw - 66rem)/16);
+    }
+}
+
+@media (min-width: 82rem) {
+    .fluid-heading-05 {
+        font-size:3rem;
+        line-height: 1.17;
+        letter-spacing: 0;
+        font-size: calc(3rem + .75*(100vw - 82rem)/17)
+    }
+}
+
+@media (min-width: 99rem) {
+    .fluid-heading-05 {
+        letter-spacing:0;
+        font-size: 3.75rem
+    }
+}
