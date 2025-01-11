@@ -16,9 +16,13 @@ fetch("https://thaidcroleplay-parliament.pages.dev/data/combined.json")
     // เมื่อเลือกชุดใหม่จาก dropdown
     document.getElementById("data_set").addEventListener("change", function () {
       const selectedSet = this.value;
+
+      // แสดงข้อมูลสมาชิกและพรรคตามชุดที่เลือก
       populateMembers(data.data[selectedSet]);
       populateParties(data.parties[selectedSet]);
-      setMemberCount(data.cmembers_data[selectedSet]);  // ดึงข้อมูลจำนวนสมาชิกจากชุดที่เลือก
+
+      // ดึงข้อมูลจำนวนสมาชิกจาก cmembers_data ที่ตรงกับชุดที่เลือก
+      setMemberCount(data.cmembers_data[selectedSet]);
     });
   })
   .catch(error => {
@@ -87,6 +91,7 @@ function setMemberCount(countData) {
   document.querySelector(".gov-data").textContent = govCount;  // แสดงจำนวนสมาชิกฝ่ายรัฐบาล
   document.querySelector(".opp-data").textContent = oppCount;  // แสดงจำนวนสมาชิกฝ่ายค้าน
 }
+
 
 
 
