@@ -384,6 +384,7 @@ h4 span{
 }
 .member-q {
     width: 30%;
+    align-items: center;
 }
 
 span.all-name {
@@ -391,4 +392,13 @@ span.all-name {
     letter-spacing: 0;
     font-size: calc(1.75rem + 0*(100vw - 20rem));
     font-weight: 700 !important;
+}
+
+.member-q div:first-child:not(.color-dp),
+.member-q div:first-child:not(.color-ptp),
+.member-q div:first-child:not(.color-ffp),
+.member-q div:first-child:not(.color-pdp),
+.member-q div:first-child:not(.color-no)
+{
+    width: 30px;
 }
