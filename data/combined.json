@@ -68,10 +68,6 @@
         "circle_party": "dp"
       },
       {
-        "name": "คนอร์ ศรีวรรณา",
-        "circle_party": "pdp"
-      },
-      {
         "name": "ชัยธวัช ตุลาคม",
         "circle_party": "ptp"
       },
@@ -110,6 +106,10 @@
       {
         "name": "สุชาติ ขาวขำ",
         "circle_party": "ffp"
+      },
+      {
+        "name": "คนอร์ ศรีวรรณา",
+        "circle_party": "pdp"
       },
       {
         "name": "จิตพิสัย ดีเสมอ",
@@ -159,15 +159,16 @@
           "name": "พรรคอนาคตใหม่ (6)"
         },
         {
-          "party": "pdp",
-          "name": "พรรคพลังธรรม (1)"
-        },
-        {
           "party": "no",
           "name": "ไม่สังกัดพรรค (1)"
         }
       ],
-      "oppParties": []
+      "oppParties": [
+        {
+          "party": "pdp",
+          "name": "พรรคพลังธรรม (1)"
+        }
+      ]
     }
   }
 }
