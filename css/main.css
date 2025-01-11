@@ -355,5 +355,5 @@ h4 span{
   .data-box {
     flex-direction: column; 
   }
-  .box-data{width:100%;}
+  .box-data{width:100% !important;}
 }
