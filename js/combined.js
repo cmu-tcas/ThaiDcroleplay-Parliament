@@ -76,9 +76,17 @@ function populateParties(parties) {
     oppContainer.appendChild(partyElement);
   });
   
-  // อัปเดตจำนวนสมาชิกใน <span class="gov-data"> และ <span class="opp-data">
-  document.querySelector(".gov-data").textContent = `(${parties.govParties.length})`; // จำนวนสมาชิกฝ่ายรัฐบาล
-  document.querySelector(".opp-data").textContent = `(${parties.oppParties.length})`; // จำนวนสมาชิกฝ่ายค้าน
+    // ฟังก์ชันอัปเดตจำนวนสมาชิกในฝ่ายรัฐบาลและฝ่ายค้าน
+  function updateMemberCount(countData) {
+    // คำนวณจำนวนสมาชิกในฝ่ายรัฐบาลและฝ่ายค้านจาก cmembers-data
+    const govCount = parseInt(countData["gov-data"]);  // แปลงเป็นตัวเลข
+    const oppCount = parseInt(countData["oppParties"]);  // แปลงเป็นตัวเลข
+  
+    // อัปเดตข้อมูลใน <span class="gov-data"> และ <span class="opp-data">
+    document.querySelector(".gov-data").textContent = `${govCount} คน`;
+    document.querySelector(".opp-data").textContent = `${oppCount} คน`;
+  }
+
 }
 
 
