@@ -303,6 +303,6 @@ p.status-date {
     display: none;
 }
 
-.circle-party:hover .name{
+.circle-party:hover + .name{
     display: block;
 }
