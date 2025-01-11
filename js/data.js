@@ -1,10 +1,13 @@
-// โหลดข้อมูลจากไฟล์ data.json
 fetch("https://thaidcroleplay-parliament.pages/data/data.json")
   .then(response => {
     if (!response.ok) {
       throw new Error("Network response was not ok " + response.statusText);
     }
-    return response.json();
+    return response.text(); // เปลี่ยนเป็น text() เพื่อตรวจสอบเนื้อหา
+  })
+  .then(text => {
+    console.log("Fetched data:", text);
+    return JSON.parse(text); // แปลงเป็น JSON หากข้อความถูกต้อง
   })
   .then(data => {
     // แสดงชุดที่ 1 เป็นค่าเริ่มต้น
@@ -19,30 +22,3 @@ fetch("https://thaidcroleplay-parliament.pages/data/data.json")
   .catch(error => {
     console.error("Error fetching the data:", error);
   });
-
-// ฟังก์ชันสำหรับสร้าง HTML
-function populateMembers(data, set) {
-  const membersBox = document.querySelector(".members-box");
-  membersBox.innerHTML = ""; // ล้างข้อมูลเดิมในกล่อง
-
-  // กรองข้อมูลตามชุดที่เลือก
-  const filteredData = data.filter(member => member.set === set);
-
-  filteredData.forEach(member => {
-    // สร้างโครงสร้าง HTML สำหรับสมาชิกแต่ละคน
-    const memberDiv = document.createElement("div");
-    memberDiv.className = "member";
-
-    const circleDiv = document.createElement("div");
-    circleDiv.className = `circle-party ${member.circle_party}`;
-
-    const nameDiv = document.createElement("div");
-    nameDiv.className = "name";
-    nameDiv.textContent = member.name;
-
-    // ใส่องค์ประกอบเข้าด้วยกัน
-    memberDiv.appendChild(circleDiv);
-    memberDiv.appendChild(nameDiv);
-    membersBox.appendChild(memberDiv);
-  });
-}
