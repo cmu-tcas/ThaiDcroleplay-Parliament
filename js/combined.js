@@ -53,7 +53,7 @@ function populateParties(parties) {
   `;
 
   const govContainer = document.querySelector(".gov .party-list-container");
-  govContainer.innerHTML = '<h4>ฝ่ายรัฐบาล</h4>';
+  // govContainer.innerHTML = '<h4>ฝ่ายรัฐบาล</h4>';
   parties.govParties.forEach(party => {
     const partyElement = document.createElement("div");
     partyElement.classList.add("party");
@@ -65,7 +65,7 @@ function populateParties(parties) {
   });
 
   const oppContainer = document.querySelector(".opp .party-list-container");
-  oppContainer.innerHTML = '<h4>ฝ่ายค้าน</h4>';
+  // oppContainer.innerHTML = '<h4>ฝ่ายค้าน</h4>';
   parties.oppParties.forEach(party => {
     const partyElement = document.createElement("div");
     partyElement.classList.add("party");
