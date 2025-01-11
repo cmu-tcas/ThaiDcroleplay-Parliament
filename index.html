@@ -102,6 +102,102 @@
           </div>
 
         
+        </div>
+      </div>
+      <div style="padding: 0 32px;" >
+        <span>รายชื่อสมาชิก</span>
+        <p class="name-set1">
+        </p>
+        <p class="special_set">
+            <div class="member">
+              <div class="color-dp">พรรคประชาธิปัตย์</div>
+              <p>จุรินทร์ ลักษณวิศิษฎ์</p>
+            </div>
+            <div class="member">
+              <div class="color-dp">พรรคประชาธิปัตย์</div>
+              <p>ภาณุพงษ์ แก้วภราดัย</p>
+            </div>
+            <div class="member">
+              <div class="color-dp">พรรคประชาธิปัตย์</div>
+              <p>อรวรรณ จันทร์ทรา</p>
+            </div>
+            <div class="member">
+              <div class="color-dp">พรรคประชาธิปัตย์</div>
+              <p>อาร์คโต้ สเปนเซอร์</p>
+            </div>
+            <div class="member">
+              <div class="color-ptp">พรรคเพื่อไทย</div>
+              <p>ชัยธวัช ตุลาคม</p>
+            </div>
+            <div class="member">
+              <div class="color-ptp">พรรคเพื่อไทย</div>
+              <p>ณเดช ราชรักษ์</p>
+            </div>
+            <div class="member">
+              <div class="color-ptp">พรรคเพื่อไทย</div>
+              <p>พิชญาภา วาจาดี</p>
+            </div>
+            <div class="member">
+              <div class="color-ptp">พรรคเพื่อไทย</div>
+              <p>ภาคิน ศิริวาจา</p>
+            </div>
+            <div class="member">
+              <div class="color-ffp">พรรคอนาคตใหม่</div>
+              <p>ซีโร่ ลักขณาอดิศร</p>
+            </div>
+            <div class="member">
+              <div class="color-ffp">พรรคอนาคตใหม่</div>
+              <p>ทัศนาวลัย ทีขะระ</p>
+            </div>
+            <div class="member">
+              <div class="color-ffp">พรรคอนาคตใหม่</div>
+              <p>ธนอน บูรณชนนท์</p>
+            </div>
+            <div class="member">
+              <div class="color-ffp">พรรคอนาคตใหม่</div>
+              <p>พีโอทีเฮข ปันจอ</p>
+            </div>
+            <div class="member">
+              <div class="color-ffp">พรรคอนาคตใหม่</div>
+              <p>วีรพันธ์ คัณธนา</p>
+            </div>
+            <div class="member">
+              <div class="color-ffp">พรรคอนาคตใหม่</div>
+              <p>สุชาติ ขาวขำ</p>
+            </div>
+            <div class="member">
+              <div class="color-pdp">พรรคพลังธรรม</div>
+              <p>คนอร์ ศรีวรรณา</p>
+            </div>
+            <div class="member">
+              <div class="color-no">ไม่สังกัดพรรคการเมือง</div>
+              <p>จิตพิสัย ดีเสมอ</p>
+            </div>
+        </p>
+        <script>
+        // Function to toggle visibility of member names
+        function toggleNames(selectedSet) {
+          const nameSet1 = document.querySelector(".name-set1");
+          const nameSpecialSet = document.querySelector(".name-special_set");
+      
+          if (selectedSet === "set1") {
+            nameSet1.style.display = "block"; // Show set1
+            nameSpecialSet.style.display = "none"; // Hide special_set
+          } else if (selectedSet === "special_set") {
+            nameSet1.style.display = "none"; // Hide set1
+            nameSpecialSet.style.display = "block"; // Show special_set
+          }
+        }
+      
+        // Event listener for dropdown change
+        document.getElementById("data_set").addEventListener("change", function () {
+          const selectedSet = this.value;
+          toggleNames(selectedSet); // Call the toggle function with selected value
+        });
+      
+        // Initial state
+        toggleNames("set1"); // Default to set1
+      </script>
       </div>
     </main>
     <script src="js/header.js"></script>
