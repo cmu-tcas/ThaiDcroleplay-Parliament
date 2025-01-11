@@ -11,12 +11,14 @@ fetch("https://thaidcroleplay-parliament.pages.dev/data/combined.json")
     // เริ่มต้นด้วยการแสดงข้อมูลชุดที่ 1
     populateMembers(data.data.set1);
     populateParties(data.parties.set1);
+    setMemberCount(data.cmembers_data.set1);  // ดึงจำนวนสมาชิกจาก set1
 
     // เมื่อเลือกชุดใหม่จาก dropdown
     document.getElementById("data_set").addEventListener("change", function () {
       const selectedSet = this.value;
       populateMembers(data.data[selectedSet]);
       populateParties(data.parties[selectedSet]);
+      setMemberCount(data.cmembers_data[selectedSet]);  // ดึงจำนวนสมาชิกจากชุดที่เลือก
     });
   })
   .catch(error => {
@@ -75,16 +77,17 @@ function populateParties(parties) {
   });
 }
 
-// ฟังก์ชันอัปเดตจำนวนสมาชิกในฝ่ายรัฐบาลและฝ่ายค้าน
-function updateMemberCount(countData) {
-  // ดึงข้อมูลจำนวนสมาชิกจาก countData แล้วใส่โดยตรงใน span
-  const govCount = countData["gov-data"];
-  const oppCount = countData["oppParties"];
-  
+// ฟังก์ชันดึงข้อมูลจำนวนสมาชิกในฝ่ายรัฐบาลและฝ่ายค้านจากชุดข้อมูลที่เลือก
+function setMemberCount(countData) {
+  // ดึงข้อมูลจาก countData ตามชื่อชุดข้อมูลที่เลือก (set1 หรือ special_set)
+  const govCount = countData["gov-data"];  // ข้อมูลจำนวนสมาชิกฝ่ายรัฐบาล
+  const oppCount = countData["oppParties"];  // ข้อมูลจำนวนสมาชิกฝ่ายค้าน
+
   // อัปเดตข้อมูลใน <span class="gov-data"> และ <span class="opp-data">
-  document.querySelector(".gov-data").textContent = govCount;
-  document.querySelector(".opp-data").textContent = oppCount;
+  document.querySelector(".gov-data").textContent = govCount;  // แสดงจำนวนสมาชิกฝ่ายรัฐบาล
+  document.querySelector(".opp-data").textContent = oppCount;  // แสดงจำนวนสมาชิกฝ่ายค้าน
 }
+
 
 
 
