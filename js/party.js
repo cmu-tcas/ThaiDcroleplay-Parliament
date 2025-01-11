@@ -26,29 +26,25 @@ function populatePartyData(setData) {
   document.querySelector(".dp").style.width = setData.dp;
   document.querySelector(".ffp").style.width = setData.ffp;
   document.querySelector(".ptp").style.width = setData.ptp;
+  document.querySelector(".pdp").style.width = setData.pdp;
+  document.querySelector(".no").style.width = setData.no;
 
   // Update the government party list
   const govParties = setData.govParties || [];
   const govDataContainer = document.querySelector(".gov .gov-data");
   govDataContainer.textContent = govParties.length;  // Display count of government parties
 
-  const govPartyList = document.querySelector(".gov");
+  const govPartyList = document.querySelector(".gov .party-list");
   govPartyList.innerHTML = ''; // Clear previous data
 
   govParties.forEach(party => {
-    const partyElement = document.createElement("div");
-    partyElement.classList.add("party");
-
-    const circleElement = document.createElement("div");
-    circleElement.classList.add("circle", party.party);
-
-    const nameElement = document.createElement("div");
-    nameElement.classList.add("name-party");
-    nameElement.textContent = party.name;
-
-    partyElement.appendChild(circleElement);
-    partyElement.appendChild(nameElement);
-    govPartyList.appendChild(partyElement);
+    const partyElement = `
+      <div class="party">
+        <div class="circle ${party.party}"></div>
+        <div class="name-party">${party.name}</div>
+      </div>
+    `;
+    govPartyList.innerHTML += partyElement;  // Add new party element to the list
   });
 
   // Update the opposition party list
@@ -56,22 +52,16 @@ function populatePartyData(setData) {
   const oppDataContainer = document.querySelector(".opp .opp-data");
   oppDataContainer.textContent = oppParties.length;  // Display count of opposition parties
 
-  const oppPartyList = document.querySelector(".opp");
+  const oppPartyList = document.querySelector(".opp .party-list");
   oppPartyList.innerHTML = ''; // Clear previous data
 
   oppParties.forEach(party => {
-    const partyElement = document.createElement("div");
-    partyElement.classList.add("party");
-
-    const circleElement = document.createElement("div");
-    circleElement.classList.add("circle", party.party);
-
-    const nameElement = document.createElement("div");
-    nameElement.classList.add("name-party");
-    nameElement.textContent = party.name;
-
-    partyElement.appendChild(circleElement);
-    partyElement.appendChild(nameElement);
-    oppPartyList.appendChild(partyElement);
+    const partyElement = `
+      <div class="party">
+        <div class="circle ${party.party}"></div>
+        <div class="name-party">${party.name}</div>
+      </div>
+    `;
+    oppPartyList.innerHTML += partyElement;  // Add new party element to the list
   });
 }
