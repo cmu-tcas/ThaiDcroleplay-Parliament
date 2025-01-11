@@ -7,29 +7,19 @@ fetch("https://thaidcroleplay-parliament.pages.dev/data/combined.json")
   })
   .then(fetchedData => {
     data = fetchedData;  // เก็บข้อมูลจาก API ที่โหลดมา
-    console.log(data); // ตรวจสอบว่าเรามีข้อมูลอะไรบ้าง
 
-    // เช็คว่า data มีข้อมูลหรือไม่
-    if (data.data && data.parties && data.cmembers_data) {
-      // เริ่มต้นด้วยการแสดงข้อมูลชุดที่ 1
-      populateMembers(data.data.set1);
-      populateParties(data.parties.set1);
-      setMemberCount(data.cmembers_data.set1);  // ดึงข้อมูลจำนวนสมาชิกจาก set1
+    // เริ่มต้นด้วยการแสดงข้อมูลชุดที่ 1
+    populateMembers(data.data.set1);
+    populateParties(data.parties.set1);
+    setMemberCount(data.cmembers_data.set1);  // ดึงข้อมูลจำนวนสมาชิกจาก set1
 
-      // เมื่อเลือกชุดใหม่จาก dropdown
-      document.getElementById("data_set").addEventListener("change", function () {
-        const selectedSet = this.value;
-        if (data.data[selectedSet] && data.parties[selectedSet] && data.cmembers_data[selectedSet]) {
-          populateMembers(data.data[selectedSet]);
-          populateParties(data.parties[selectedSet]);
-          setMemberCount(data.cmembers_data[selectedSet]);  // ดึงข้อมูลจำนวนสมาชิกจากชุดที่เลือก
-        } else {
-          console.error("ข้อมูลชุดที่เลือกไม่ถูกต้อง:", selectedSet);
-        }
-      });
-    } else {
-      console.error("ข้อมูลไม่สมบูรณ์");
-    }
+    // เมื่อเลือกชุดใหม่จาก dropdown
+    document.getElementById("data_set").addEventListener("change", function () {
+      const selectedSet = this.value;
+      populateMembers(data.data[selectedSet]);
+      populateParties(data.parties[selectedSet]);
+      setMemberCount(data.cmembers_data[selectedSet]);  // ดึงข้อมูลจำนวนสมาชิกจากชุดที่เลือก
+    });
   })
   .catch(error => {
     console.error("Error fetching the data:", error);
@@ -63,7 +53,7 @@ function populateParties(parties) {
   `;
 
   const govContainer = document.querySelector(".gov .party-list-container");
-  govContainer.innerHTML = `<h4>ฝ่ายรัฐบาล <span class="gov-data">${parties.govData}</span></h4>`;
+  govContainer.innerHTML = `<h4>ฝ่ายรัฐบาล <span class="gov-data"></span></h4>`;
   parties.govParties.forEach(party => {
     const partyElement = document.createElement("div");
     partyElement.classList.add("party");
@@ -75,7 +65,7 @@ function populateParties(parties) {
   });
 
   const oppContainer = document.querySelector(".opp .party-list-container");
-  oppContainer.innerHTML = `<h4>ฝ่ายค้าน <span class="opp-data">${parties.oppData}</span></h4>`;
+  oppContainer.innerHTML = `<h4>ฝ่ายค้าน <span class="opp-data"></span></h4>`;
   parties.oppParties.forEach(party => {
     const partyElement = document.createElement("div");
     partyElement.classList.add("party");
@@ -90,12 +80,12 @@ function populateParties(parties) {
 // ฟังก์ชันดึงข้อมูลจำนวนสมาชิกในฝ่ายรัฐบาลและฝ่ายค้านจากชุดข้อมูลที่เลือก
 function setMemberCount(countData) {
   // ดึงข้อมูลจำนวนสมาชิกฝ่ายรัฐบาลและฝ่ายค้านจาก cmembers_data
-  const govData = countData["gov-data"];  // ข้อมูลจำนวนสมาชิกฝ่ายรัฐบาล
-  const oppData = countData["oppParties"];  // ข้อมูลจำนวนสมาชิกฝ่ายค้าน
+  const govCount = countData["gov-data"];  // ข้อมูลจำนวนสมาชิกฝ่ายรัฐบาล
+  const oppCount = countData["oppParties"];  // ข้อมูลจำนวนสมาชิกฝ่ายค้าน
 
   // อัปเดตข้อมูลใน <span class="gov-data"> และ <span class="opp-data">
-  document.querySelector(".gov-data").textContent = govData;  // แสดงจำนวนสมาชิกฝ่ายรัฐบาล
-  document.querySelector(".opp-data").textContent = oppData;  // แสดงจำนวนสมาชิกฝ่ายค้าน
+  document.querySelector(".gov-data").textContent = govCount;  // แสดงจำนวนสมาชิกฝ่ายรัฐบาล
+  document.querySelector(".opp-data").textContent = oppCount;  // แสดงจำนวนสมาชิกฝ่ายค้าน
 }
 
 
