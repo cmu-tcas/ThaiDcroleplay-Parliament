@@ -113,6 +113,10 @@ header .flex ul > li:hover > ul {
     display: flex;
 }
 
+.items-center {
+    align-items: center;
+}
+
 .flex ul li {
   cursor: pointer;
 }
@@ -174,4 +178,13 @@ span.status {
     cursor: default;
     vertical-align: middle;
     word-break: break-word;
+}
+
+
+p.status-date {
+    margin-left: 8px;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.42857;
+    letter-spacing: .16px;
 }
