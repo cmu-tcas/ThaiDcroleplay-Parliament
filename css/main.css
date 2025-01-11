@@ -378,9 +378,10 @@ h4 span{
 .name-special_set ,.name-set1{
     display: flex;
     flex-wrap: wrap;
+    gap: 10px;
 }
 .member-q {
-    width: 25%;
+    width: 33%;
 }
 
 span.all-name {
