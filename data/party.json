@@ -30,11 +30,11 @@
       {
         "party": "dp",
         "name": "พรรคประชาธิปัตย์"
-      }
+      },
       {
         "party": "ptp",
         "name": "พรรคเพื่อไทย"
-      },,
+      },
       {
         "party": "ffp",
         "name": "พรรคอนาคตใหม่"
@@ -47,6 +47,7 @@
         "party": "no",
         "name": "ไม่สังกัดพรรค"
       }
-    ]
+    ],
+    "oppParties": []  // Added an empty opposition parties array to avoid errors
   }
 }
