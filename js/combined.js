@@ -1,29 +1,29 @@
 fetch("https://thaidcroleplay-parliament.pages.dev/data/combined.json")
-    .then(response => {
+  .then(response => {
     if (!response.ok) {
       throw new Error("Network response was not ok " + response.statusText);
     }
     return response.json();
   })
   .then(data => {
-    // ใช้ข้อมูลจาก `data.data` เพื่อแสดงสมาชิก
-    populateMembers(data.data.set1); // เริ่มต้นด้วยการแสดงข้อมูลชุดที่ 1
-
-    // ใช้ข้อมูลจาก `data.parties` เพื่อแสดงข้อมูลพรรค
-    populateParties(data.parties.set1); // เริ่มต้นด้วยการแสดงข้อมูลชุดที่ 1
+    // เริ่มต้นด้วยการแสดงข้อมูลชุดที่ 1
+    populateMembers(data.data.set1);
+    populateParties(data.parties.set1);
+    updateMemberCount(data.cmembers-data.set1);  // อัปเดตจำนวนสมาชิกฝ่ายรัฐบาลและฝ่ายค้าน
 
     // เมื่อเลือกชุดใหม่จาก dropdown
     document.getElementById("data_set").addEventListener("change", function () {
       const selectedSet = this.value;
       populateMembers(data.data[selectedSet]);
       populateParties(data.parties[selectedSet]);
+      updateMemberCount(data.cmembers-data[selectedSet]);  // อัปเดตจำนวนสมาชิกฝ่ายรัฐบาลและฝ่ายค้าน
     });
   })
   .catch(error => {
     console.error("Error fetching the data:", error);
   });
 
-// Function to populate members (จาก data.json)
+// ฟังก์ชันแสดงข้อมูลสมาชิก
 function populateMembers(members) {
   const container = document.getElementById("members-list");
   container.innerHTML = ''; // Clear previous data
@@ -39,7 +39,7 @@ function populateMembers(members) {
   });
 }
 
-// Function to populate parties (จาก party.json)
+// ฟังก์ชันแสดงข้อมูลพรรค
 function populateParties(parties) {
   const bars = document.querySelector(".bars");
   bars.innerHTML = `
@@ -73,6 +73,17 @@ function populateParties(parties) {
     `;
     oppContainer.appendChild(partyElement);
   });
+}
+
+// ฟังก์ชันอัปเดตจำนวนสมาชิกในฝ่ายรัฐบาลและฝ่ายค้าน
+function updateMemberCount(countData) {
+  // คำนวณจำนวนสมาชิกในฝ่ายรัฐบาลและฝ่ายค้านจาก cmembers-data
+  const govCount = countData["gov-data"];
+  const oppCount = countData["oppParties"];
+
+  // อัปเดตข้อมูลใน <span class="gov-data"> และ <span class="opp-data">
+  document.querySelector(".gov-data").textContent = govCount;
+  document.querySelector(".opp-data").textContent = oppCount;
 }
 
 //   .then(response => {
