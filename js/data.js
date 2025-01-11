@@ -49,14 +49,23 @@ function populateMembers(data, set) {
 // Function to update status message and class
 function updateStatus(set) {
   const statusSpan = document.querySelector(".status");
+  const statusDateSpan = document.querySelector(".status-date");
   
   if (set === "set1") {
+    // Set1 status
     statusSpan.textContent = "อยูในวาระ"; // Message for set1
     statusSpan.classList.remove("red");
     statusSpan.classList.add("green"); // Add green class
+    
+    // Set1 date range
+    statusDateSpan.textContent = "1 มกราคม - 1 กุมภาพันธ์";
   } else if (set === "special_set") {
+    // Special set status
     statusSpan.textContent = "หมดวาระ"; // Message for special_set
     statusSpan.classList.remove("green");
     statusSpan.classList.add("red"); // Add red class
+    
+    // Special set date range
+    statusDateSpan.textContent = "8 ธันวาคม - 28 ธันวาคม";
   }
 }
