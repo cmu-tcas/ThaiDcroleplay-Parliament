@@ -374,3 +374,11 @@ h4 span{
   }
   .box-data{width:100% !important;}
 }
+
+.name-special_set ,.name-set1{
+    display: flex;
+    flex-wrap: wrap;
+}
+.member-q {
+    width: 25%;
+}
