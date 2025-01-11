@@ -8,18 +8,29 @@ fetch("https://thaidcroleplay-parliament.pages.dev/data/combined.json")
   .then(fetchedData => {
     data = fetchedData;  // เก็บข้อมูลจาก API ที่โหลดมา
 
-    // เริ่มต้นด้วยการแสดงข้อมูลชุดที่ 1
-    populateMembers(data.data.set1);
-    populateParties(data.parties.set1);
-    setMemberCount(data.cmembers_data.set1);  // ดึงข้อมูลจำนวนสมาชิกจาก set1
+    // ตรวจสอบว่า data มีข้อมูลที่ต้องการหรือไม่
+    if (data && data.data && data.parties && data.cmembers_data) {
+      // เริ่มต้นด้วยการแสดงข้อมูลชุดที่ 1
+      populateMembers(data.data.set1);
+      populateParties(data.parties.set1);
+      setMemberCount(data.cmembers_data.set1);  // ดึงข้อมูลจำนวนสมาชิกจาก set1
 
-    // เมื่อเลือกชุดใหม่จาก dropdown
-    document.getElementById("data_set").addEventListener("change", function () {
-      const selectedSet = this.value;
-      populateMembers(data.data[selectedSet]);
-      populateParties(data.parties[selectedSet]);
-      setMemberCount(data.cmembers_data[selectedSet]);  // ดึงข้อมูลจำนวนสมาชิกจากชุดที่เลือก
-    });
+      // เมื่อเลือกชุดใหม่จาก dropdown
+      document.getElementById("data_set").addEventListener("change", function () {
+        const selectedSet = this.value;
+        
+        // ตรวจสอบว่า selectedSet มีข้อมูลใน data หรือไม่
+        if (data.data[selectedSet] && data.parties[selectedSet] && data.cmembers_data[selectedSet]) {
+          populateMembers(data.data[selectedSet]);
+          populateParties(data.parties[selectedSet]);
+          setMemberCount(data.cmembers_data[selectedSet]);  // ดึงข้อมูลจำนวนสมาชิกจากชุดที่เลือก
+        } else {
+          console.error("ข้อมูลชุดที่เลือกไม่พบ");
+        }
+      });
+    } else {
+      console.error("ข้อมูลจาก API ไม่ถูกต้อง");
+    }
   })
   .catch(error => {
     console.error("Error fetching the data:", error);
@@ -87,6 +98,7 @@ function setMemberCount(countData) {
   document.querySelector(".gov-data").textContent = govData;  // แสดงจำนวนสมาชิกฝ่ายรัฐบาล
   document.querySelector(".opp-data").textContent = oppData;  // แสดงจำนวนสมาชิกฝ่ายค้าน
 }
+
 
 
 
