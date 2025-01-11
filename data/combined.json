@@ -6,7 +6,35 @@
         "circle_party": "dp"
       },
       {
+        "name": "เป๊กโก้ บัญญาญ่า",
+        "circle_party": "dp"
+      },
+      {
+        "name": "ภาณุพงษ์ แก้วภราดัย",
+        "circle_party": "dp"
+      },
+      {
+        "name": "อภิสิทธิ์ เวชชาชีวะ",
+        "circle_party": "dp"
+      },
+      {
+        "name": "อรวรรณ จันทร์ทรา",
+        "circle_party": "dp"
+      },
+      {
+        "name": "อาร์คโต้ สเปนเซอร์",
+        "circle_party": "dp"
+      },
+      {
         "name": "ณเดช ราชรักษ์",
+        "circle_party": "ptp"
+      },
+      {
+        "name": "พิชญาภา วาจาดี",
+        "circle_party": "ptp"
+      },
+      {
+        "name": "ภาคิน ศิริวาจา",
         "circle_party": "ptp"
       },
       {
@@ -18,8 +46,73 @@
         "circle_party": "ffp"
       },
       {
-        "name": "เป๊กโก้ บัญญาญ่า",
+        "name": "สุชาติ ขาวขำ",
+        "circle_party": "ffp"
+      }
+    ],
+    "special_set": [{
+        "name": "จุรินทร์ ลักษณวิศิษฎ์",
         "circle_party": "dp"
+      },
+      {
+        "name": "ภาณุพงษ์ แก้วภราดัย",
+        "circle_party": "dp"
+      },
+      {
+        "name": "อรวรรณ จันทร์ทรา",
+        "circle_party": "dp"
+      },
+      {
+        "name": "อาร์คโต้ สเปนเซอร์",
+        "circle_party": "dp"
+      },
+      {
+        "name": "ชัยธวัช ตุลาคม",
+        "circle_party": "ptp"
+      },
+      {
+        "name": "ณเดช ราชรักษ์",
+        "circle_party": "ptp"
+      },
+      {
+        "name": "พิชญาภา วาจาดี",
+        "circle_party": "ptp"
+      },
+      {
+        "name": "ภาคิน ศิริวาจา",
+        "circle_party": "ptp"
+      },
+      {
+        "name": "ซีโร่ ลักขณาอดิศร",
+        "circle_party": "ffp"
+      },
+      {
+        "name": "ทัศนาวลัย ทีขะระ",
+        "circle_party": "ffp"
+      },
+      {
+        "name": "ธนอน บูรณชนนท์",
+        "circle_party": "ffp"
+      },
+      {
+        "name": "พีโอทีเฮข ปันจอ",
+        "circle_party": "ffp"
+      },
+      {
+        "name": "วีรพันธ์ คัณธนา",
+        "circle_party": "ffp"
+      },
+      {
+        "name": "สุชาติ ขาวขำ",
+        "circle_party": "ffp"
+      },
+      {
+        "name": "คนอร์ ศรีวรรณา",
+        "circle_party": "pdp"
+      },
+      {
+        "name": "จิตพิสัย ดีเสมอ",
+        "circle_party": "no"
       }
     ]
   },
