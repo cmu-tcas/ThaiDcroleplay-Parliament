@@ -37,7 +37,7 @@ function populateMembers(data, set) {
     const memberElement = document.createElement("div");
     memberElement.classList.add("member");
     memberElement.innerHTML = `
-      <div class="${member.circle_party}"></div>
+      <div class="${member.circle_party} circle-party"></div>
       <p class="name">${member.name}</p>
     `;
     container.appendChild(memberElement);
