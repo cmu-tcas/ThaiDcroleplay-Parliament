@@ -394,27 +394,7 @@ span.all-name {
     font-weight: 700 !important;
 }
 
-.member-q div:first-child:not(.color-dp)
-{
-    width: 30px;
-}
-
-.member-q div:first-child:not(.color-ptp)
-{
-    width: 30px;
-}
-
-.member-q div:first-child:not(.color-ffp)
-{
-    width: 30px;
-}
-
-.member-q div:first-child:not(.color-pdp)
-{
-    width: 30px;
-}
-
-.member-q div:first-child:not(.color-no)
+.member-q div:first-child:not(.color-dp):not(.color-ptp):not(.color-ffp):not(.color-pdp):not(.color-no)
 {
     width: 30px;
 }
