@@ -45,6 +45,9 @@ header{
 header {
   background-color: #000; /* พื้นหลังสีดำ */
   color: #fff; /* สีข้อความ */
+    z-index: 999;
+    position: fixed;
+    width: 100%;
 }
 
 header nav {
@@ -257,7 +260,7 @@ p.status-date {
 .dropdown::after {
   content: "▼";
   position: absolute;
-  top: 50%;
+  top: 22px;
   right: 15px;
   transform: translateY(-50%);
   pointer-events: none;
