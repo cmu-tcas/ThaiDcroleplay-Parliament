@@ -278,3 +278,31 @@ p.status-date {
   border-color: #007bff;
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
+
+.circle-party {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+}
+.dp {
+    background: #00B2FF;
+}
+.ptp {
+    background: #F41724;
+}
+.ffp {
+    background: #FF5C00;
+}
+.members-box{
+    display: flex;
+}
+
+.name {
+    position: absolute;
+    margin-top: -40px;
+    display: none;
+}
+
+.circle-party:hover .name{
+    display: block;
+}
