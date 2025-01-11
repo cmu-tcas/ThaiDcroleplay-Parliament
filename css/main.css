@@ -112,7 +112,9 @@ header .flex ul > li:hover > ul {
 .flex{
     display: flex;
 }
-
+.between{
+    justify-content: space-between;
+}
 .items-center {
     align-items: center;
 }
