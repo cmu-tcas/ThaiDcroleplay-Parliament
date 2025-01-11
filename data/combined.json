@@ -168,5 +168,14 @@
       ],
       "oppParties": []
     }
+  },
+  "cmembers-data": {
+    "set1": {
+      "gov-data": "9 คน",
+      "oppParties": "3 คน"
+    },
+    "special_set": {
+      "gov-data": "16 คน",
+      "oppParties": "คน"
   }
 }
