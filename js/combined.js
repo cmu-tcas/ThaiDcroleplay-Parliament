@@ -1,29 +1,31 @@
 fetch("https://thaidcroleplay-parliament.pages.dev/data/combined.json")
-    .then(response => {
+  .then(response => {
     if (!response.ok) {
       throw new Error("Network response was not ok " + response.statusText);
     }
     return response.json();
   })
   .then(data => {
-    // ใช้ข้อมูลจาก `data.data` เพื่อแสดงสมาชิก
-    populateMembers(data.data.set1); // เริ่มต้นด้วยการแสดงข้อมูลชุดที่ 1
-
-    // ใช้ข้อมูลจาก `data.parties` เพื่อแสดงข้อมูลพรรค
-    populateParties(data.parties.set1); // เริ่มต้นด้วยการแสดงข้อมูลชุดที่ 1
+    // เริ่มต้นด้วยการแสดงข้อมูลชุดที่ 1
+    populateMembers(data.data.set1);  // เริ่มต้นแสดงสมาชิก
+    populateParties(data.parties.set1);  // เริ่มต้นแสดงข้อมูลพรรค
+    updateMemberCount('set1');  // เริ่มต้นแสดงจำนวนสมาชิก
+    updateStatus('set1');  // เริ่มต้นแสดงสถานะ
 
     // เมื่อเลือกชุดใหม่จาก dropdown
     document.getElementById("data_set").addEventListener("change", function () {
       const selectedSet = this.value;
       populateMembers(data.data[selectedSet]);
       populateParties(data.parties[selectedSet]);
+      updateMemberCount(selectedSet);  // อัปเดตจำนวนสมาชิก
+      updateStatus(selectedSet);  // อัปเดตสถานะ
     });
   })
   .catch(error => {
     console.error("Error fetching the data:", error);
   });
 
-// Function to populate members (จาก data.json)
+// ฟังก์ชันแสดงข้อมูลสมาชิก
 function populateMembers(members) {
   const container = document.getElementById("members-list");
   container.innerHTML = ''; // Clear previous data
@@ -39,7 +41,7 @@ function populateMembers(members) {
   });
 }
 
-// Function to populate parties (จาก party.json)
+// ฟังก์ชันแสดงข้อมูลพรรค
 function populateParties(parties) {
   const bars = document.querySelector(".bars");
   bars.innerHTML = `
@@ -55,7 +57,7 @@ function populateParties(parties) {
   parties.govParties.forEach(party => {
     const partyElement = document.createElement("div");
     partyElement.classList.add("party");
-    partyElement.innerHTML = `
+    partyElement.innerHTML = ` 
       <div class="circle ${party.party}"></div>
       <div class="name-party">${party.name}</div>
     `;
@@ -75,29 +77,22 @@ function populateParties(parties) {
   });
 }
 
+// ฟังก์ชันอัปเดตสถานะและช่วงวันที่
 function updateStatus(set) {
   const statusSpan = document.querySelector(".status");
   const statusDateSpan = document.querySelector(".status-date");
-  
+
   if (set === "set1") {
-    // Set1 status
-    statusSpan.textContent = "อยูในวาระ"; // Message for set1
+    statusSpan.textContent = "อยู่ในวาระ";
     statusSpan.classList.remove("red");
-    statusSpan.classList.add("green"); // Add green class
-    
-    // Set1 date range
+    statusSpan.classList.add("green"); // เปลี่ยนสีเขียว
+
     statusDateSpan.textContent = "1 มกราคม - 1 กุมภาพันธ์";
   } else if (set === "special_set") {
-    // Special set status
-    statusSpan.textContent = "หมดวาระ"; // Message for special_set
+    statusSpan.textContent = "หมดวาระ";
     statusSpan.classList.remove("green");
-    statusSpan.classList.add("red"); // Add red class
-    
-    // Special set date range
+    statusSpan.classList.add("red"); // เปลี่ยนสีแดง
+
     statusDateSpan.textContent = "8 ธันวาคม - 28 ธันวาคม";
   }
-}
-  // กำหนดข้อมูลจำนวนสมาชิกใน HTML
-  document.querySelector(".gov-data").innerHTML = `(${govData})`;  // กำหนดจำนวนสมาชิกฝ่ายรัฐบาล
-  document.querySelector(".opp-data").innerHTML = `(${oppData})`;  // กำหนดจำนวนสมาชิกฝ่ายค้าน
 }
