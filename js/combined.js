@@ -79,10 +79,15 @@ function populateParties(parties) {
 
 // ฟังก์ชันอัปเดตจำนวนสมาชิกในฝ่ายรัฐบาลและฝ่ายค้าน
 function updateMemberCount(countData) {
-  // ดึงจำนวนสมาชิกจาก countData แล้วใส่โดยตรงใน span
-  document.querySelector(".gov-data").textContent = countData["gov-data"];
-  document.querySelector(".opp-data").textContent = countData["oppParties"];
+  // ดึงข้อมูลจำนวนสมาชิกจาก countData แล้วใส่โดยตรงใน span
+  const govCount = countData["gov-data"];
+  const oppCount = countData["oppParties"];
+  
+  // อัปเดตข้อมูลใน <span class="gov-data"> และ <span class="opp-data">
+  document.querySelector(".gov-data").textContent = govCount;
+  document.querySelector(".opp-data").textContent = oppCount;
 }
+
 
 
 // fetch("https://thaidcroleplay-parliament.pages.dev/data/combined.json")
