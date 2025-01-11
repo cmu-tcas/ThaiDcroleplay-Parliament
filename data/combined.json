@@ -1,0 +1,79 @@
+{
+  "data": {
+    "set1": [
+      {
+        "name": "จุรินทร์ ลักษณวิศิษฎ์",
+        "circle_party": "dp"
+      },
+      {
+        "name": "ณเดช ราชรักษ์",
+        "circle_party": "ptp"
+      },
+      {
+        "name": "ทัศนาวลัย ทีขะระ",
+        "circle_party": "ffp"
+      },
+      {
+        "name": "ธนอน บูรณชนนท์",
+        "circle_party": "ffp"
+      },
+      {
+        "name": "เป๊กโก้ บัญญาญ่า",
+        "circle_party": "dp"
+      }
+    ]
+  },
+  "parties": {
+    "set1": {
+      "dp": "40%",
+      "ffp": "30%",
+      "ptp": "30%",
+      "govParties": [
+        {
+          "party": "dp",
+          "name": "พรรคประชาธิปัตย์"
+        },
+        {
+          "party": "ffp",
+          "name": "พรรคอนาคตใหม่"
+        }
+      ],
+      "oppParties": [
+        {
+          "party": "ptp",
+          "name": "พรรคเพื่อไทย"
+        }
+      ]
+    },
+    "special_set": {
+      "dp": "25%",
+      "ffp": "37.5%",
+      "ptp": "25%",
+      "pdp": "6.25%",
+      "no": "6.25%",
+      "govParties": [
+        {
+          "party": "dp",
+          "name": "พรรคประชาธิปัตย์"
+        },
+        {
+          "party": "ptp",
+          "name": "พรรคเพื่อไทย"
+        },
+        {
+          "party": "ffp",
+          "name": "พรรคอนาคตใหม่"
+        },
+        {
+          "party": "pdp",
+          "name": "พรรคพลังธรรม"
+        },
+        {
+          "party": "no",
+          "name": "ไม่สังกัดพรรค"
+        }
+      ],
+      "oppParties": []
+    }
+  }
+}
