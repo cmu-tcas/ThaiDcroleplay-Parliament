@@ -295,6 +295,7 @@ p.status-date {
 }
 .members-box{
     display: flex;
+    gap: 10px;
 }
 
 .name {
