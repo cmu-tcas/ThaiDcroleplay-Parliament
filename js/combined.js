@@ -11,14 +11,12 @@ fetch("https://thaidcroleplay-parliament.pages.dev/data/combined.json")
     // เริ่มต้นด้วยการแสดงข้อมูลชุดที่ 1
     populateMembers(data.data.set1);
     populateParties(data.parties.set1);
-    updateMemberCount(data.cmembers_data.set1);  // อัปเดตจำนวนสมาชิกฝ่ายรัฐบาลและฝ่ายค้าน
 
     // เมื่อเลือกชุดใหม่จาก dropdown
     document.getElementById("data_set").addEventListener("change", function () {
       const selectedSet = this.value;
       populateMembers(data.data[selectedSet]);
       populateParties(data.parties[selectedSet]);
-      updateMemberCount(data.cmembers_data[selectedSet]);  // อัปเดตจำนวนสมาชิกฝ่ายรัฐบาลและฝ่ายค้าน
     });
   })
   .catch(error => {
