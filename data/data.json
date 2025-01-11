@@ -1,12 +1,130 @@
 [
   {
+    "set": "special_set",
+    "name": "จุรินทร์ ลักษณวิศิษฎ์",
+    "circle_party": "dp"
+  },
+  {
+    "set": "special_set",
+    "name": "ภาณุพงษ์ แก้วภราดัย",
+    "circle_party": "dp"
+  },
+  {
+    "set": "special_set",
+    "name": "อรวรรณ จันทร์ทรา",
+    "circle_party": "dp"
+  },
+  {
+    "set": "special_set",
+    "name": "อาร์คโต้ สเปนเซอร์",
+    "circle_party": "dp"
+  },
+  {
+    "set": "special_set",
+    "name": "ชัยธวัช ตุลาคม",
+    "circle_party": "ptp"
+  },
+  {
+    "set": "special_set",
+    "name": "ณเดช ราชรักษ์",
+    "circle_party": "ptp"
+  },
+  {
+    "set": "special_set",
+    "name": "พิชญาภา วาจาดี",
+    "circle_party": "ptp"
+  },
+  {
+    "set": "special_set",
+    "name": "ภาคิน ศิริวาจา",
+    "circle_party": "ptp"
+  },
+  {
+    "set": "special_set",
+    "name": "ซีโร่ ลักขณาอดิศร",
+    "circle_party": "ffp"
+  },
+  {
+    "set": "special_set",
+    "name": "ทัศนาวลัย ทีขะระ",
+    "circle_party": "ffp"
+  },
+  {
+    "set": "special_set",
+    "name": "ธนอน บูรณชนนท์",
+    "circle_party": "ffp"
+  },
+  {
+    "set": "special_set",
+    "name": "พีโอทีเฮข ปันจอ",
+    "circle_party": "ffp"
+  },
+  {
+    "set": "special_set",
+    "name": "วีรพันธ์ คัณธนา",
+    "circle_party": "ffp"
+  },
+  {
+    "set": "special_set",
+    "name": "สุชาติ ขาวขำ",
+    "circle_party": "ffp"
+  },
+  {
+    "set": "special_set",
+    "name": "คนอร์ ศรีวรรณา",
+    "circle_party": "pdp"
+  },
+  {
+    "set": "special_set",
+    "name": "จิตพิสัย ดีเสมอ",
+    "circle_party": "no"
+  },
+
+
+  
+  {
     "set": "set1",
     "name": "จุรินทร์ ลักษณวิศิษฎ์",
     "circle_party": "dp"
   },
   {
     "set": "set1",
+    "name": "เป๊กโก้ บัญญาญ่า",
+    "circle_party": "dp"
+  },
+  {
+    "set": "set1",
+    "name": "ภาณุพงษ์ แก้วภราดัย",
+    "circle_party": "dp"
+  },
+  {
+    "set": "set1",
+    "name": "อภิสิทธิ์ เวชชาชีวะ",
+    "circle_party": "dp"
+  },
+  {
+    "set": "set1",
+    "name": "อรวรรณ จันทร์ทรา",
+    "circle_party": "dp"
+  },
+  {
+    "set": "set1",
+    "name": "อาร์คโต้ สเปนเซอร์",
+    "circle_party": "dp"
+  },
+  {
+    "set": "set1",
     "name": "ณเดช ราชรักษ์",
+    "circle_party": "ptp"
+  },
+  {
+    "set": "set1",
+    "name": "พิชญาภา วาจาดี",
+    "circle_party": "ptp"
+  },
+  {
+    "set": "set1",
+    "name": "ภาคิน ศิริวาจา",
     "circle_party": "ptp"
   },
   {
@@ -21,7 +139,7 @@
   },
   {
     "set": "set1",
-    "name": "เป๊กโก้ บัญญาญ่า",
-    "circle_party": "dp"
+    "name": "สุชาติ ขาวขำ",
+    "circle_party": "ffp"
   }
 ]
