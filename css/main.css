@@ -188,12 +188,12 @@ p.status-date {
     line-height: 1.42857;
     letter-spacing: .16px;
 }
+
 .fluid-heading-05 {
     font-size: 2rem;
     line-height: 1.25;
     letter-spacing: 0;
     font-size: calc(2rem + .25*(100vw - 20rem)/22);
-    font-family: Kondolar Thai,ui-serif,Georgia,Cambria,Times New Roman,Times,serif;
     font-weight: 700!important
 }
 
