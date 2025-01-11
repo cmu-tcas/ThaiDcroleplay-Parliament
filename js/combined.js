@@ -3,22 +3,19 @@ fetch("https://thaidcroleplay-parliament.pages.dev/data/combined.json")
     if (!response.ok) {
       throw new Error("Network response was not ok " + response.statusText);
     }
-    return response.json();
+    return response.json(); // แปลงข้อมูลจาก JSON
   })
-  .then(fetchedData => {
-    data = fetchedData;  // เก็บข้อมูลจาก API ที่โหลดมา
-
-    // เริ่มต้นด้วยการแสดงข้อมูลชุดที่ 1
+  .then(data => {
+    console.log(data); // แสดงข้อมูลทั้งหมด
+    // ใช้ข้อมูลจาก `data` เพื่อแสดงสมาชิก
     populateMembers(data.data.set1);
+    // ใช้ข้อมูลจาก `parties` เพื่อแสดงข้อมูลพรรค
     populateParties(data.parties.set1);
-    updateMemberCount(data.cmembers_data.set1);  // อัปเดตจำนวนสมาชิกฝ่ายรัฐบาลและฝ่ายค้าน
-
-    // เมื่อเลือกชุดใหม่จาก dropdown
+    // หากเลือกชุดใหม่ เช่น `special_set`
     document.getElementById("data_set").addEventListener("change", function () {
       const selectedSet = this.value;
       populateMembers(data.data[selectedSet]);
       populateParties(data.parties[selectedSet]);
-      updateMemberCount(data.cmembers_data[selectedSet]);  // อัปเดตจำนวนสมาชิกฝ่ายรัฐบาลและฝ่ายค้าน
     });
   })
   .catch(error => {
@@ -80,3 +77,52 @@ function populateParties(parties) {
   document.querySelector(".gov-data").textContent = `(${parties.govParties.length})`; // จำนวนสมาชิกฝ่ายรัฐบาล
   document.querySelector(".opp-data").textContent = `(${parties.oppParties.length})`; // จำนวนสมาชิกฝ่ายค้าน
 }
+
+
+
+
+// // Function to populate members (from data.json)
+// function populateMembers(members) {
+//   const container = document.getElementById("members-list");
+//   container.innerHTML = ''; // Clear previous data
+//   members.forEach(member => {
+//     const memberElement = document.createElement("div");
+//     memberElement.classList.add("member");
+//     memberElement.innerHTML = `
+//       <div class="${member.circle_party} circle-party"></div> 
+//       <p class="name">${member.name}</p>
+//     `;
+//     container.appendChild(memberElement);
+//   });
+// }
+// // Function to populate parties (from party.json)
+// function populateParties(parties) {
+//   const bars = document.querySelector(".bars");
+//   bars.innerHTML = `
+//     <div class="dp" style="width: ${parties.dp}"></div>
+//     <div class="ffp" style="width: ${parties.ffp}"></div>
+//     <div class="ptp" style="width: ${parties.ptp}"></div>
+//   `;
+//   const govContainer = document.querySelector(".gov");
+//   govContainer.innerHTML = '<h4>ฝ่ายรัฐบาล</h4>';
+//   parties.govParties.forEach(party => {
+//     const partyElement = document.createElement("div");
+//     partyElement.classList.add("party");
+//     partyElement.innerHTML = `
+//       <div class="circle ${party.party}"></div>
+//       <div class="name-party">${party.name}</div>
+//     `;
+//     govContainer.appendChild(partyElement);
+//   });
+//   const oppContainer = document.querySelector(".opp");
+//   oppContainer.innerHTML = '<h4>ฝ่ายค้าน</h4>';
+//   parties.oppParties.forEach(party => {
+//     const partyElement = document.createElement("div");
+//     partyElement.classList.add("party");
+//     partyElement.innerHTML = `
+//       <div class="circle ${party.party}"></div>
+//       <div class="name-party">${party.name}</div>
+//     `;
+//     oppContainer.appendChild(partyElement);
+//   });
+// }
