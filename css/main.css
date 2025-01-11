@@ -320,3 +320,11 @@ p.status-date {
 .circle-party:hover + .name{
     display: block;
 }
+.bars{
+	width:100%;
+    height: 20px;
+    display: flex;
+}
+.bars > div{
+    height: 20px;
+}
