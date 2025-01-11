@@ -306,6 +306,23 @@ p.status-date {
 .no{
     background: #828897;
 }
+
+
+.color-dp {
+    color: #00B2FF;
+}
+.color-ptp {
+    color: #F41724;
+}
+.color-ffp {
+    color: #FF5C00;
+}
+.color-pdp{
+    color: #1a477f;
+}
+.color-no{
+    color: #828897;
+}
 .members-box{
     display: flex;
     flex-wrap: wrap;
