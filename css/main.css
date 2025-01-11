@@ -300,6 +300,12 @@ p.status-date {
 .ffp {
     background: #FF5C00;
 }
+.pdp{
+    background: #1a477f;
+}
+.no{
+    background: #828897;
+}
 .members-box{
     display: flex;
     gap: 10px;
