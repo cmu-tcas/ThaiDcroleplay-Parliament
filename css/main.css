@@ -233,3 +233,44 @@ p.status-date {
         font-size: 3.75rem
     }
 }
+
+.dropdown select {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  appearance: none; /* ซ่อนลูกศรเริ่มต้นของเบราว์เซอร์ */
+  -webkit-appearance: none; /* สำหรับเบราว์เซอร์ Webkit */
+  -moz-appearance: none; /* สำหรับเบราว์เซอร์ Firefox */
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 300px;
+}
+
+.dropdown::after {
+  content: "▼";
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 12px;
+  color: #666;
+}
+
+.dropdown select:hover {
+  border-color: #666;
+}
+
+.dropdown select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
