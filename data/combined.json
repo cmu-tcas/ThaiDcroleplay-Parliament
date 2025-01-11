@@ -50,7 +50,8 @@
         "circle_party": "ffp"
       }
     ],
-    "special_set": [{
+    "special_set": [
+      {
         "name": "จุรินทร์ ลักษณวิศิษฎ์",
         "circle_party": "dp"
       },
@@ -177,5 +178,6 @@
     "special_set": {
       "gov-data": "16 คน",
       "oppParties": "คน"
+    }
   }
 }
