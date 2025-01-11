@@ -1,17 +1,18 @@
 fetch("https://thaidcroleplay-parliament.pages.dev/data/combined.json")
-  .then(response => {
+    .then(response => {
     if (!response.ok) {
       throw new Error("Network response was not ok " + response.statusText);
     }
-    return response.json(); // แปลงข้อมูลจาก JSON
+    return response.json();
   })
   .then(data => {
-    console.log(data); // แสดงข้อมูลทั้งหมด
-    // ใช้ข้อมูลจาก `data` เพื่อแสดงสมาชิก
-    populateMembers(data.data.set1);
-    // ใช้ข้อมูลจาก `parties` เพื่อแสดงข้อมูลพรรค
-    populateParties(data.parties.set1);
-    // หากเลือกชุดใหม่ เช่น `special_set`
+    // ใช้ข้อมูลจาก `data.data` เพื่อแสดงสมาชิก
+    populateMembers(data.data.set1); // เริ่มต้นด้วยการแสดงข้อมูลชุดที่ 1
+
+    // ใช้ข้อมูลจาก `data.parties` เพื่อแสดงข้อมูลพรรค
+    populateParties(data.parties.set1); // เริ่มต้นด้วยการแสดงข้อมูลชุดที่ 1
+
+    // เมื่อเลือกชุดใหม่จาก dropdown
     document.getElementById("data_set").addEventListener("change", function () {
       const selectedSet = this.value;
       populateMembers(data.data[selectedSet]);
@@ -22,7 +23,7 @@ fetch("https://thaidcroleplay-parliament.pages.dev/data/combined.json")
     console.error("Error fetching the data:", error);
   });
 
-// ฟังก์ชันแสดงข้อมูลสมาชิก
+// Function to populate members (จาก data.json)
 function populateMembers(members) {
   const container = document.getElementById("members-list");
   container.innerHTML = ''; // Clear previous data
@@ -38,7 +39,7 @@ function populateMembers(members) {
   });
 }
 
-// ฟังก์ชันแสดงข้อมูลพรรค
+// Function to populate parties (จาก party.json)
 function populateParties(parties) {
   const bars = document.querySelector(".bars");
   bars.innerHTML = `
@@ -72,19 +73,39 @@ function populateParties(parties) {
     `;
     oppContainer.appendChild(partyElement);
   });
-  
-  // อัปเดตจำนวนสมาชิกใน <span class="gov-data"> และ <span class="opp-data">
-  document.querySelector(".gov-data").textContent = `(${parties.govParties.length})`; // จำนวนสมาชิกฝ่ายรัฐบาล
-  document.querySelector(".opp-data").textContent = `(${parties.oppParties.length})`; // จำนวนสมาชิกฝ่ายค้าน
 }
 
+//   .then(response => {
+//     if (!response.ok) {
+//       throw new Error("Network response was not ok " + response.statusText);
+//     }
+//     return response.json(); // แปลงข้อมูลจาก JSON
+//   })
+//   .then(data => {
+//     console.log(data); // แสดงข้อมูลทั้งหมด
 
+//     // ใช้ข้อมูลจาก `data` เพื่อแสดงสมาชิก
+//     populateMembers(data.data.set1);
 
+//     // ใช้ข้อมูลจาก `parties` เพื่อแสดงข้อมูลพรรค
+//     populateParties(data.parties.set1);
+
+//     // หากเลือกชุดใหม่ เช่น `special_set`
+//     document.getElementById("data_set").addEventListener("change", function () {
+//       const selectedSet = this.value;
+//       populateMembers(data.data[selectedSet]);
+//       populateParties(data.parties[selectedSet]);
+//     });
+//   })
+//   .catch(error => {
+//     console.error("Error fetching the data:", error);
+//   });
 
 // // Function to populate members (from data.json)
 // function populateMembers(members) {
 //   const container = document.getElementById("members-list");
 //   container.innerHTML = ''; // Clear previous data
+
 //   members.forEach(member => {
 //     const memberElement = document.createElement("div");
 //     memberElement.classList.add("member");
@@ -95,6 +116,7 @@ function populateParties(parties) {
 //     container.appendChild(memberElement);
 //   });
 // }
+
 // // Function to populate parties (from party.json)
 // function populateParties(parties) {
 //   const bars = document.querySelector(".bars");
@@ -103,6 +125,7 @@ function populateParties(parties) {
 //     <div class="ffp" style="width: ${parties.ffp}"></div>
 //     <div class="ptp" style="width: ${parties.ptp}"></div>
 //   `;
+
 //   const govContainer = document.querySelector(".gov");
 //   govContainer.innerHTML = '<h4>ฝ่ายรัฐบาล</h4>';
 //   parties.govParties.forEach(party => {
@@ -114,6 +137,7 @@ function populateParties(parties) {
 //     `;
 //     govContainer.appendChild(partyElement);
 //   });
+
 //   const oppContainer = document.querySelector(".opp");
 //   oppContainer.innerHTML = '<h4>ฝ่ายค้าน</h4>';
 //   parties.oppParties.forEach(party => {
