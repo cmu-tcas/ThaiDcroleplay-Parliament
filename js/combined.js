@@ -11,14 +11,14 @@ fetch("https://thaidcroleplay-parliament.pages.dev/data/combined.json")
     // เริ่มต้นด้วยการแสดงข้อมูลชุดที่ 1
     populateMembers(data.data.set1);
     populateParties(data.parties.set1);
-    setMemberCount(data.cmembers_data.set1);  // ดึงจำนวนสมาชิกจาก set1
+    setMemberCount(data.cmembers_data.set1);  // ดึงข้อมูลจำนวนสมาชิกจาก set1
 
     // เมื่อเลือกชุดใหม่จาก dropdown
     document.getElementById("data_set").addEventListener("change", function () {
       const selectedSet = this.value;
       populateMembers(data.data[selectedSet]);
       populateParties(data.parties[selectedSet]);
-      setMemberCount(data.cmembers_data[selectedSet]);  // ดึงจำนวนสมาชิกจากชุดที่เลือก
+      setMemberCount(data.cmembers_data[selectedSet]);  // ดึงข้อมูลจำนวนสมาชิกจากชุดที่เลือก
     });
   })
   .catch(error => {
@@ -53,7 +53,7 @@ function populateParties(parties) {
   `;
 
   const govContainer = document.querySelector(".gov .party-list-container");
-  govContainer.innerHTML = `<h4>ฝ่ายรัฐบาล <span class="gov-data">${parties.govParties.length} คน</span></h4>`;
+  govContainer.innerHTML = `<h4>ฝ่ายรัฐบาล <span class="gov-data">${parties.govData}</span></h4>`;
   parties.govParties.forEach(party => {
     const partyElement = document.createElement("div");
     partyElement.classList.add("party");
@@ -65,7 +65,7 @@ function populateParties(parties) {
   });
 
   const oppContainer = document.querySelector(".opp .party-list-container");
-  oppContainer.innerHTML = `<h4>ฝ่ายค้าน <span class="opp-data">${parties.oppParties.length} คน</span></h4>`;
+  oppContainer.innerHTML = `<h4>ฝ่ายค้าน <span class="opp-data">${parties.oppData}</span></h4>`;
   parties.oppParties.forEach(party => {
     const partyElement = document.createElement("div");
     partyElement.classList.add("party");
@@ -79,14 +79,15 @@ function populateParties(parties) {
 
 // ฟังก์ชันดึงข้อมูลจำนวนสมาชิกในฝ่ายรัฐบาลและฝ่ายค้านจากชุดข้อมูลที่เลือก
 function setMemberCount(countData) {
-  // ดึงข้อมูลจาก countData ตามชื่อชุดข้อมูลที่เลือก (set1 หรือ special_set)
-  const govCount = countData["gov-data"];  // ข้อมูลจำนวนสมาชิกฝ่ายรัฐบาล
-  const oppCount = countData["oppParties"];  // ข้อมูลจำนวนสมาชิกฝ่ายค้าน
+  // ดึงข้อมูลจำนวนสมาชิกฝ่ายรัฐบาลและฝ่ายค้านจาก cmembers_data
+  const govData = countData["gov-data"];  // ข้อมูลจำนวนสมาชิกฝ่ายรัฐบาล
+  const oppData = countData["oppParties"];  // ข้อมูลจำนวนสมาชิกฝ่ายค้าน
 
   // อัปเดตข้อมูลใน <span class="gov-data"> และ <span class="opp-data">
-  document.querySelector(".gov-data").textContent = govCount;  // แสดงจำนวนสมาชิกฝ่ายรัฐบาล
-  document.querySelector(".opp-data").textContent = oppCount;  // แสดงจำนวนสมาชิกฝ่ายค้าน
+  document.querySelector(".gov-data").textContent = govData;  // แสดงจำนวนสมาชิกฝ่ายรัฐบาล
+  document.querySelector(".opp-data").textContent = oppData;  // แสดงจำนวนสมาชิกฝ่ายค้าน
 }
+
 
 
 
