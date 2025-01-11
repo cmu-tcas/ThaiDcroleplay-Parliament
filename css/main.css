@@ -320,6 +320,7 @@ p.status-date {
 .circle-party:hover + .name{
     display: block;
 }
+
 .bars{
 	width:100%;
     height: 20px;
@@ -327,4 +328,24 @@ p.status-date {
 }
 .bars > div{
     height: 20px;
+}
+.party-list{
+	display:flex;
+}
+.circle{
+	width: 10px;
+    height: 10px;
+    border-radius: 100%;
+}
+h1,h2,h3,h4,h5,h6{margin:0;}
+.gr{width: 33.3333%;}
+.party{
+	display: flex;
+    align-items: center;
+}
+.name-party {
+    margin-left: 5px;
+}
+h4 span{
+	color: #999;
 }
