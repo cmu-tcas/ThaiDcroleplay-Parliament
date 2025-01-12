@@ -1,0 +1,11 @@
+td:first-child {
+    max-width: 123px;
+    width: 123px;
+    FONT-SIZE: 10pt;
+}
+
+tr td:last-child {
+    font-size: 10pt;
+    COLOR: #696969;
+    max-width: 439px;
+}
