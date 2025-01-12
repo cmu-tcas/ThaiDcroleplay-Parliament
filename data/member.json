@@ -3,84 +3,84 @@
     {
       "id_member": "01",
       "party_member": "พรรคประชาธิปัตย์",
-      "th-f-name_member": "จุรินทร์",
+      "th-f-name_member": "นายจุรินทร์",
       "th-s-name_member": "ลักษณวิศิษฎ์",
       "img_member": "path_to_image_01.jpg"
     },
     {
       "id_member": "02",
       "party_member": "พรรคเพื่อไทย",
-      "th-f-name_member": "ณเดช",
+      "th-f-name_member": "นายณเดช",
       "th-s-name_member": "ราชรักษ์",
       "img_member": "path_to_image_02.jpg"
     },
     {
       "id_member": "03",
       "party_member": "พรรคอนาคตใหม่",
-      "th-f-name_member": "ทัศนาวลัย",
+      "th-f-name_member": "นางทัศนาวลัย",
       "th-s-name_member": "ทีขะระ",
       "img_member": "path_to_image_03.jpg"
     },
     {
       "id_member": "04",
       "party_member": "พรรคอนาคตใหม่",
-      "th-f-name_member": "ธนอนธร",
+      "th-f-name_member": "นายธนอนธร",
       "th-s-name_member": "บูรณชนนท์",
       "img_member": "path_to_image_04.jpg"
     },
     {
       "id_member": "05",
       "party_member": "พรรคประชาธิปัตย์",
-      "th-f-name_member": "เป๊กโก้",
+      "th-f-name_member": "นายเป๊กโก้",
       "th-s-name_member": "บัญญาญ่า",
       "img_member": "path_to_image_05.jpg"
     },
     {
       "id_member": "06",
       "party_member": "พรรคเพื่อไทย",
-      "th-f-name_member": "พิชญาภา",
+      "th-f-name_member": "นางสาวพิชญาภา",
       "th-s-name_member": "วาจาดี",
       "img_member": "path_to_image_06.jpg"
     },
     {
       "id_member": "07",
       "party_member": "พรรคเพื่อไทย",
-      "th-f-name_member": "ภาคิน",
+      "th-f-name_member": "นายภาคิน",
       "th-s-name_member": "ศิริวาจา",
       "img_member": "path_to_image_07.jpg"
     },
     {
       "id_member": "08",
       "party_member": "พรรคประชาธิปัตย์",
-      "th-f-name_member": "ภาณุพงษ์",
+      "th-f-name_member": "นายภาณุพงษ์",
       "th-s-name_member": "แก้วภราดัย",
       "img_member": "path_to_image_08.jpg"
     },
     {
       "id_member": "09",
       "party_member": "พรรคอนาคตใหม่",
-      "th-f-name_member": "สุชาติ",
+      "th-f-name_member": "นายสุชาติ",
       "th-s-name_member": "ขาวขำ",
       "img_member": "path_to_image_09.jpg"
     },
     {
       "id_member": "10",
       "party_member": "พรรคประชาธิปัตย์",
-      "th-f-name_member": "อภิสิทธิ์",
+      "th-f-name_member": "นายอภิสิทธิ์",
       "th-s-name_member": "เวชชาชีวะ",
       "img_member": "path_to_image_10.jpg"
     },
     {
       "id_member": "11",
       "party_member": "พรรคประชาธิปัตย์",
-      "th-f-name_member": "อรวรรณ",
+      "th-f-name_member": "นางอรวรรณ",
       "th-s-name_member": "จันทร์ทรา",
       "img_member": "path_to_image_11.jpg"
     },
     {
       "id_member": "12",
       "party_member": "พรรคประชาธิปัตย์",
-      "th-f-name_member": "อาร์คโต้",
+      "th-f-name_member": "นายอาร์คโต้",
       "th-s-name_member": "สเปนเซอร์",
       "img_member": "path_to_image_12.jpg"
     }
