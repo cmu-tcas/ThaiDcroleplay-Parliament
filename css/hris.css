@@ -197,7 +197,7 @@ li {
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
     white-space: nowrap;
     vertical-align: baseline;
-    background-color: #999;
+    background-color: #800000;
 }
 
 .pull-left {
@@ -242,4 +242,13 @@ h1, h2, h3, h4, h5, h6 {
     color: inherit;
     text-rendering: optimizelegibility;
     margin: 0;
+}
+
+img {
+    width: auto\9;
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+    border: 0;
+    -ms-interpolation-mode: bicubic;
 }
