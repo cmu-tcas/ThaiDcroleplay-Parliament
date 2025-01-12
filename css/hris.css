@@ -164,13 +164,10 @@ ul, ol {
     border-bottom: 1px dashed #dcdcdc;
     line-height: normal;
 }
-.main_content li {
+.main_content li h4{
     line-height: 25px;
 }
-.main_content li br {
-    line-height: 0;
-}
-li {
+li:not(br){
     line-height: 20px;
 }
 
