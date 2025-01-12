@@ -167,6 +167,9 @@ ul, ol {
 .main_content li {
     line-height: 25px;
 }
+.main_content li br {
+    line-height: 0;
+}
 li {
     line-height: 20px;
 }
