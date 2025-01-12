@@ -1,4 +1,22 @@
-
+span.status {
+    border: 0;
+    font-size: .75rem;
+    font-weight: 400;
+    line-height: 1.33333;
+    letter-spacing: .32px;
+    display: inline-flex;
+    min-width: 2rem;
+    max-width: 100%;
+    min-height: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    padding: .25rem .5rem;
+    margin: .25rem;
+    border-radius: .9375rem;
+    cursor: default;
+    vertical-align: middle;
+    word-break: break-word;
+}
 .status.green{
     background-color: #baffc6;
 }
