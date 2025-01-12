@@ -331,9 +331,6 @@ img {
     background-color: #d9edf7;
     border-color: #bce8f1;
 }
-.alert, .alert h4 {
-    color: #c09853;
-}
 .alert {
     padding: 8px 35px 8px 14px;
     margin-bottom: 20px;
@@ -351,7 +348,4 @@ img {
     cursor: default;
     font-size: 11px;
     padding: 2px 4px;
-}
-.label-info, .badge-info {
-    background: #058DC7;
 }
