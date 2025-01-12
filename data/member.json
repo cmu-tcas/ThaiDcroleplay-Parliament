@@ -1,102 +1,4 @@
 {
-  "set1": [
-    {
-      "id_member": "01",
-      "no_member": "003",
-      "party_member": "พรรคประชาธิปัตย์",
-      "th-f-name_member": "นายจุรินทร์",
-      "th-s-name_member": "ลักษณวิศิษฎ์",
-      "img_member": "/passing.png"
-    },
-    {
-      "id_member": "02",
-      "no_member": "006",
-      "party_member": "พรรคเพื่อไทย",
-      "th-f-name_member": "นายณเดช",
-      "th-s-name_member": "ราชรักษ์",
-      "img_member": "/passing.png"
-    },
-    {
-      "id_member": "03",
-      "no_member": "007",
-      "party_member": "พรรคอนาคตใหม่",
-      "th-f-name_member": "นางทัศนาวลัย",
-      "th-s-name_member": "ทีขะระ",
-      "img_member": "/passing.png"
-    },
-    {
-      "id_member": "04",
-      "no_member": "008",
-      "party_member": "พรรคอนาคตใหม่",
-      "th-f-name_member": "นายธนอนธร",
-      "th-s-name_member": "บูรณชนนท์",
-      "img_member": "/passing.png"
-    },
-    {
-      "id_member": "05",
-      "no_member": "017",
-      "party_member": "พรรคประชาธิปัตย์",
-      "th-f-name_member": "นายเป๊กโก้",
-      "th-s-name_member": "บัญญาญ่า",
-      "img_member": "/passing.png"
-    },
-    {
-      "id_member": "06",
-      "no_member": "010",
-      "party_member": "พรรคเพื่อไทย",
-      "th-f-name_member": "นางสาวพิชญาภา",
-      "th-s-name_member": "วาจาดี",
-      "img_member": "/passing.png"
-    },
-    {
-      "id_member": "07",
-      "no_member": "009",
-      "party_member": "พรรคเพื่อไทย",
-      "th-f-name_member": "นายภาคิน",
-      "th-s-name_member": "ศิริวาจา",
-      "img_member": "/passing.png"
-    },
-    {
-      "id_member": "08",
-      "no_member": "012",
-      "party_member": "พรรคประชาธิปัตย์",
-      "th-f-name_member": "นายภาณุพงษ์",
-      "th-s-name_member": "แก้วภราดัย",
-      "img_member": "/passing.png"
-    },
-    {
-      "id_member": "09",
-      "no_member": "014",
-      "party_member": "พรรคอนาคตใหม่",
-      "th-f-name_member": "นายสุชาติ",
-      "th-s-name_member": "ขาวขำ",
-      "img_member": "/passing.png"
-    },
-    {
-      "id_member": "10",
-      "no_member": "018",
-      "party_member": "พรรคประชาธิปัตย์",
-      "th-f-name_member": "นายอภิสิทธิ์",
-      "th-s-name_member": "เวชชาชีวะ",
-      "img_member": "/passing.png"
-    },
-    {
-      "id_member": "11",
-      "no_member": "015",
-      "party_member": "พรรคประชาธิปัตย์",
-      "th-f-name_member": "นางอรวรรณ",
-      "th-s-name_member": "จันทร์ทรา",
-      "img_member": "/passing.png"
-    },
-    {
-      "id_member": "12",
-      "no_member": "016",
-      "party_member": "พรรคประชาธิปัตย์",
-      "th-f-name_member": "นายอาร์คโต้",
-      "th-s-name_member": "สเปนเซอร์",
-      "img_member": "/passing.png"
-    }
-  ],
   "special_set": [
     {
       "id_member": "01",
@@ -223,6 +125,104 @@
       "no_member": "016",
       "party_member": "พรรคประชาธิปัตย์",
       "th-f-name_member": "อาร์คโต้",
+      "th-s-name_member": "สเปนเซอร์",
+      "img_member": "/passing.png"
+    }
+  ],
+  "set1": [
+    {
+      "id_member": "01",
+      "no_member": "017",
+      "party_member": "พรรคประชาธิปัตย์",
+      "th-f-name_member": "นายจุรินทร์",
+      "th-s-name_member": "ลักษณวิศิษฎ์",
+      "img_member": "/passing.png"
+    },
+    {
+      "id_member": "02",
+      "no_member": "018",
+      "party_member": "พรรคเพื่อไทย",
+      "th-f-name_member": "นายณเดช",
+      "th-s-name_member": "ราชรักษ์",
+      "img_member": "/passing.png"
+    },
+    {
+      "id_member": "03",
+      "no_member": "019",
+      "party_member": "พรรคอนาคตใหม่",
+      "th-f-name_member": "นางทัศนาวลัย",
+      "th-s-name_member": "ทีขะระ",
+      "img_member": "/passing.png"
+    },
+    {
+      "id_member": "04",
+      "no_member": "020",
+      "party_member": "พรรคอนาคตใหม่",
+      "th-f-name_member": "นายธนอนธร",
+      "th-s-name_member": "บูรณชนนท์",
+      "img_member": "/passing.png"
+    },
+    {
+      "id_member": "05",
+      "no_member": "021",
+      "party_member": "พรรคประชาธิปัตย์",
+      "th-f-name_member": "นายเป๊กโก้",
+      "th-s-name_member": "บัญญาญ่า",
+      "img_member": "/passing.png"
+    },
+    {
+      "id_member": "06",
+      "no_member": "022",
+      "party_member": "พรรคเพื่อไทย",
+      "th-f-name_member": "นางสาวพิชญาภา",
+      "th-s-name_member": "วาจาดี",
+      "img_member": "/passing.png"
+    },
+    {
+      "id_member": "07",
+      "no_member": "023",
+      "party_member": "พรรคเพื่อไทย",
+      "th-f-name_member": "นายภาคิน",
+      "th-s-name_member": "ศิริวาจา",
+      "img_member": "/passing.png"
+    },
+    {
+      "id_member": "08",
+      "no_member": "024",
+      "party_member": "พรรคประชาธิปัตย์",
+      "th-f-name_member": "นายภาณุพงษ์",
+      "th-s-name_member": "แก้วภราดัย",
+      "img_member": "/passing.png"
+    },
+    {
+      "id_member": "09",
+      "no_member": "025",
+      "party_member": "พรรคอนาคตใหม่",
+      "th-f-name_member": "นายสุชาติ",
+      "th-s-name_member": "ขาวขำ",
+      "img_member": "/passing.png"
+    },
+    {
+      "id_member": "10",
+      "no_member": "026",
+      "party_member": "พรรคประชาธิปัตย์",
+      "th-f-name_member": "นายอภิสิทธิ์",
+      "th-s-name_member": "เวชชาชีวะ",
+      "img_member": "/passing.png"
+    },
+    {
+      "id_member": "11",
+      "no_member": "027",
+      "party_member": "พรรคประชาธิปัตย์",
+      "th-f-name_member": "นางอรวรรณ",
+      "th-s-name_member": "จันทร์ทรา",
+      "img_member": "/passing.png"
+    },
+    {
+      "id_member": "12",
+      "no_member": "028",
+      "party_member": "พรรคประชาธิปัตย์",
+      "th-f-name_member": "นายอาร์คโต้",
       "th-s-name_member": "สเปนเซอร์",
       "img_member": "/passing.png"
     }
