@@ -9,3 +9,8 @@ tr td:last-child {
     COLOR: #696969;
     max-width: 439px;
 }
+
+.text_normal {
+    display: flex;
+    justify-content: center;
+}
