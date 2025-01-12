@@ -1,4 +1,22 @@
 
+.status.green{
+    background-color: #baffc6;
+}
+
+.status.red{
+    background-color: #ffbaba;
+}
+
+.status.or{
+    background-color: #ffd7ba;
+}
+.status.wh{
+    background-color: #f4f4f4;
+}
+.status.bl{
+    background-color: #ababab;
+}
+
     
     .color-dp {
         color: #00B2FF;
