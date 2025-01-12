@@ -349,3 +349,8 @@ img {
     font-size: 11px;
     padding: 2px 4px;
 }
+
+a {
+    color: unset;
+    text-decoration: none;
+}
