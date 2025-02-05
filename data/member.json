@@ -54,7 +54,7 @@
       "party_member": "พรรคอนาคตใหม่",
       "th-f-name_member": "ทัศนาวลัย",
       "th-s-name_member": "ทีขะระ",
-      "img_member": "/passing.png"
+      "img_member": "https://web-parliament.pages.dev/img/007.webp"
     },
     {
       "id_member": "08",
@@ -62,7 +62,7 @@
       "party_member": "พรรคอนาคตใหม่",
       "th-f-name_member": "ธนอนธร",
       "th-s-name_member": "บูรณชนนท์",
-      "img_member": "/passing.png"
+      "img_member": "https://web-parliament.pages.dev/img/008.webp"
     },
     {
       "id_member": "09",
@@ -70,7 +70,7 @@
       "party_member": "พรรคเพื่อไทย",
       "th-f-name_member": "ภาคิน",
       "th-s-name_member": "ศิริวาจา",
-      "img_member": "/passing.png"
+      "img_member": "https://web-parliament.pages.dev/img/009.webp"
     },
     {
       "id_member": "10",
@@ -78,7 +78,7 @@
       "party_member": "พรรคเพื่อไทย",
       "th-f-name_member": "พิชญาภา",
       "th-s-name_member": "วาจาดี",
-      "img_member": "/passing.png"
+      "img_member": "https://web-parliament.pages.dev/img/010.webp"
     },
     {
       "id_member": "11",
@@ -86,7 +86,7 @@
       "party_member": "พรรคอนาคตใหม่",
       "th-f-name_member": "พีโอทีเฮข",
       "th-s-name_member": "ปันจอ",
-      "img_member": "/passing.png"
+      "img_member": "https://web-parliament.pages.dev/img/011.webp"
     },
     {
       "id_member": "12",
@@ -94,7 +94,7 @@
       "party_member": "พรรคประชาธิปัตย์",
       "th-f-name_member": "ภาณุพงษ์",
       "th-s-name_member": "แก้วภราดัย",
-      "img_member": "/passing.png"
+      "img_member": "https://web-parliament.pages.dev/img/012.webp"
     },
     {
       "id_member": "13",
@@ -102,7 +102,7 @@
       "party_member": "พรรคอนาคตใหม่",
       "th-f-name_member": "วีรพันธ์",
       "th-s-name_member": "คัณธนา",
-      "img_member": "/passing.png"
+      "img_member": "https://web-parliament.pages.dev/img/013.webp"
     },
     {
       "id_member": "14",
@@ -110,7 +110,7 @@
       "party_member": "พรรคอนาคตใหม่",
       "th-f-name_member": "สุชาติ",
       "th-s-name_member": "ขาวขำ",
-      "img_member": "/passing.png"
+      "img_member": "https://web-parliament.pages.dev/img/014.webp"
     },
     {
       "id_member": "15",
@@ -118,7 +118,7 @@
       "party_member": "พรรคประชาธิปัตย์",
       "th-f-name_member": "อรวรรณ",
       "th-s-name_member": "จันทร์ทรา",
-      "img_member": "/passing.png"
+      "img_member": "https://web-parliament.pages.dev/img/015.webp"
     },
     {
       "id_member": "16",
@@ -126,7 +126,7 @@
       "party_member": "พรรคประชาธิปัตย์",
       "th-f-name_member": "อาร์คโต้",
       "th-s-name_member": "สเปนเซอร์",
-      "img_member": "/passing.png"
+      "img_member": "https://web-parliament.pages.dev/img/016.webp"
     }
   ],
    "set1": [
@@ -152,7 +152,7 @@
       "party_member": "พรรคอนาคตใหม่",
       "th-f-name_member": "นางทัศนาวลัย",
       "th-s-name_member": "ทีขะระ",
-      "img_member": "/passing.png"
+      "img_member": "https://web-parliament.pages.dev/img/007.webp"
     },
     {
       "id_member": "04",
@@ -160,7 +160,7 @@
       "party_member": "พรรคอนาคตใหม่",
       "th-f-name_member": "นายธนอนธร",
       "th-s-name_member": "บูรณชนนท์",
-      "img_member": "/passing.png"
+      "img_member": "https://web-parliament.pages.dev/img/008.webp"
     },
     {
       "id_member": "05",
@@ -168,7 +168,7 @@
       "party_member": "พรรคประชาธิปัตย์",
       "th-f-name_member": "นายเป๊กโก้",
       "th-s-name_member": "บัญญาญ่า",
-      "img_member": "/passing.png"
+      "img_member": "https://web-parliament.pages.dev/img/017.webp"
     },
     {
       "id_member": "06",
@@ -176,7 +176,7 @@
       "party_member": "พรรคเพื่อไทย",
       "th-f-name_member": "นางสาวพิชญาภา",
       "th-s-name_member": "วาจาดี",
-      "img_member": "/passing.png"
+      "img_member": "https://web-parliament.pages.dev/img/010.webp"
     },
     {
       "id_member": "07",
@@ -184,7 +184,7 @@
       "party_member": "พรรคเพื่อไทย",
       "th-f-name_member": "นายภาคิน",
       "th-s-name_member": "ศิริวาจา",
-      "img_member": "/passing.png"
+      "img_member": "https://web-parliament.pages.dev/img/008.webp"
     },
     {
       "id_member": "08",
@@ -192,7 +192,7 @@
       "party_member": "พรรคประชาธิปัตย์",
       "th-f-name_member": "นายภาณุพงษ์",
       "th-s-name_member": "แก้วภราดัย",
-      "img_member": "/passing.png"
+      "img_member": "https://web-parliament.pages.dev/img/012.webp"
     },
     {
       "id_member": "09",
@@ -200,7 +200,7 @@
       "party_member": "พรรคอนาคตใหม่",
       "th-f-name_member": "นายสุชาติ",
       "th-s-name_member": "ขาวขำ",
-      "img_member": "/passing.png"
+      "img_member": "https://web-parliament.pages.dev/img/014.webp"
     },
     {
       "id_member": "10",
@@ -208,7 +208,7 @@
       "party_member": "พรรคประชาธิปัตย์",
       "th-f-name_member": "นายอภิสิทธิ์",
       "th-s-name_member": "เวชชาชีวะ",
-      "img_member": "/passing.png"
+      "img_member": "https://web-parliament.pages.dev/img/018.webp"
     },
     {
       "id_member": "11",
@@ -216,7 +216,7 @@
       "party_member": "พรรคประชาธิปัตย์",
       "th-f-name_member": "นางอรวรรณ",
       "th-s-name_member": "จันทร์ทรา",
-      "img_member": "/passing.png"
+      "img_member": "https://web-parliament.pages.dev/img/015.webp"
     },
     {
       "id_member": "12",
@@ -224,7 +224,7 @@
       "party_member": "พรรคประชาธิปัตย์",
       "th-f-name_member": "นายอาร์คโต้",
       "th-s-name_member": "สเปนเซอร์",
-      "img_member": "/passing.png"
+      "img_member": "https://web-parliament.pages.dev/img/016.webp"
     } 
   ]
 }
