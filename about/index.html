@@ -19,6 +19,10 @@
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <style>
+                button.data-representatives { border: 2px solid #a5a5a5 !important; background: rgba(255, 255, 255, 0.83); color: #990000; padding: 14px 5px !important; font-size: 15px !important; cursor: pointer !important; box-shadow: 4px 4px #d4d4d4; text-align: center; display: flex ; flex-direction: column; width: 100%; align-items: center; justify-content: center; }
+                .container.p1 .row.justify-content-sm-center { display: flex ; justify-content: center; }
+        </style>
     </head>
 <body class="sidebar_hidden gebo-fixed" style=" overflow-x: hidden; ">
     <header>
@@ -65,8 +69,8 @@
     <h1 style="padding: 0 64px;margin-top:54px;text-align: center;padding-top: 50px;color: #660000;">ประธาน/รองประธาน สภาผู้แทนราษฎร</h1>
     <div class="container p1" style="padding: 0 64px;">
         <div class="row justify-content-sm-center">
-          <div class="col-sm-3 col"><button aria-selected="true" class="data-representatives" onclick="myFunction(1)" type="button">ประธานสภาผู้แทนราษฎร <span class="tab"> </span><span class="tab"> </span> <span class="tab"> </span></button></div>
-          <div class="col-sm-3 col"><button aria-selected="false" class="data-representatives" onclick="myFunction(2)" type="button">รองประธานสภาผู้แทนราษฎร คนที่หนึ่ง</button></div>
+          <div class="col-sm-4 col"><button aria-selected="true" class="data-representatives" onclick="myFunction(1)" type="button">ประธานสภาผู้แทนราษฎร <span class="tab"> </span><span class="tab"> </span> <span class="tab"> </span></button></div>
+          <div class="col-sm-4 col"><button aria-selected="false" class="data-representatives" onclick="myFunction(2)" type="button">รองประธานสภาผู้แทนราษฎร คนที่หนึ่ง</button></div>
         </div>
     </div>
     <div class="container" style="padding: 0 64px; margin-top: 20px;">
@@ -82,17 +86,35 @@
         </div>
     </div>
 
-        <script>
-            function myFunction(option) {
-                document.getElementById('content1').style.display = 'block';
-                document.getElementById('content2').style.display = 'none';
-                
-                if (option === 1) {
-                    document.getElementById('content1').style.display = 'block';
-                } else if (option === 2) {
-                    document.getElementById('content2').style.display = 'block';
-                }
-            }
-        </script>
+     <div class="container" style="padding: 0 64px; margin-top: 20px;">
+    <div class="row justify-content-md-center">
+        <div id="content1" class="col-md-6 content-box" style="display: block; border: 1px solid #ddd; padding: 20px; border-radius: 10px;">
+            <h2 style="color: #660000;">ประธานสภาผู้แทนราษฎร</h2>
+            <p>รายละเอียดเกี่ยวกับประธานสภาผู้แทนราษฎร...</p>
+        </div>
+        <div id="content2" class="col-md-6 content-box" style="display: none; border: 1px solid #ddd; padding: 20px; border-radius: 10px;">
+            <h2 style="color: #660000;">รองประธานสภาผู้แทนราษฎร คนที่หนึ่ง</h2>
+            <p>รายละเอียดเกี่ยวกับรองประธานสภาผู้แทนราษฎร คนที่หนึ่ง...</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    function myFunction(option) {
+        document.getElementById('content1').style.display = 'none';
+        document.getElementById('content2').style.display = 'none';
+        
+        if (option === 1) {
+            document.getElementById('content1').style.display = 'block';
+        } else if (option === 2) {
+            document.getElementById('content2').style.display = 'block';
+        }
+    }
+
+    // แสดงเนื้อหาของประธานสภาผู้แทนราษฎรเป็นค่าเริ่มต้น
+    document.addEventListener("DOMContentLoaded", function() {
+        myFunction(1);
+    });
+</script>
 </body>
 </html>
