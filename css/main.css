@@ -35,7 +35,7 @@ body, *, *:before, *:after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-    font-family: "Bai Jamjuree", serif;
+    font-family: "Bai Jamjuree", serif !important;
 }
 
 header{
