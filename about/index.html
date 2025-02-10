@@ -27,8 +27,27 @@
                     .container.p1 .row.justify-content-sm-center {
                         display: grid;
                         gap: 10px;
+                        justify-content: unset;
                     }
                 }
+                @media (max-width: 640px) {
+                    header .flex ul:last-child li:last-child {
+                        transform: translateX(-60px);
+                    } 
+                
+                    header .flex ul li:last-child a {
+                        transform: translateX(60px);
+                    }
+                
+                    header .flex ul li:last-child ul {
+                        transform: translateX(-60px);
+                    } 
+                
+                    header .flex ul li:last-child ul li {
+                        transform: translateX(-60px) !important;
+                    }
+                }
+
         </style>
     </head>
 <body class="sidebar_hidden gebo-fixed" style=" overflow-x: hidden; height: auto;">
