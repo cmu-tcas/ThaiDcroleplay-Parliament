@@ -23,6 +23,23 @@
                 button.data-representatives { border: 2px solid #a5a5a5 !important; background: rgba(255, 255, 255, 0.83); color: #990000; padding: 14px 5px !important; font-size: 15px !important; cursor: pointer !important; box-shadow: 4px 4px #d4d4d4; text-align: center; display: flex ; flex-direction: column; width: 100%; align-items: center; justify-content: center; }
                 .container.p1 .row.justify-content-sm-center { display: flex ; justify-content: center; }
                 .theme_red { color: #660000; }
+                @media (max-width: 640px) {
+                    header .flex ul:last-child li:last-child {
+                        transform: translateX(-60px);
+                    } 
+                
+                    header .flex ul li:last-child a {
+                        transform: translateX(60px);
+                    }
+                
+                    header .flex ul li:last-child ul {
+                        transform: translateX(-60px);
+                    } 
+                
+                    header .flex ul li:last-child ul li {
+                        transform: translateX(-60px) !important;
+                    }
+                }
         </style>
     </head>
 <body class="sidebar_hidden gebo-fixed" style=" overflow-x: hidden; height: auto;">
