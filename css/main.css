@@ -80,6 +80,7 @@ header .flex ul li a {
   padding: 15px;
   display: inline-block;
   transition: color 0.3s;
+  font-size: 16px;
 }
 
 header .flex ul li a:hover {
